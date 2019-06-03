@@ -91,8 +91,8 @@ public class metodos_pruebas {
 
         System.out.println("El estadistico Dn es: " + DnAux);//valor del estadistico
 
-        //basado en la tabla con una muestra de 30 el valor de Dα,n  es igual a 0,242
-        double d_alpha_n = 0.242;
+        //basado en la tabla DEL LIBRO PAG-42 con una muestra de 30 el valor de Dα,n  es igual a 0,242
+        double d_alpha_n = 0.134;
         if (DnAux < d_alpha_n) {
             System.out.println("No se puede rechazar la hipotesis de que los números generados provienen de una distribución uniforme");
         } else {
@@ -197,11 +197,11 @@ public class metodos_pruebas {
         System.out.println("Quintilla... " + quintilla1);  //FE = 0.10 
         System.out.println("Todos diferentes... " + todosdiferentes1); //FE = 30.24
 
-        double x0 = Math.pow((par1 - 50.40), 2) / 50.40 + Math.pow((doblepar - 10.80), 2) / 10.80
+        double x0 = Math.pow((par1 - (N*0.50400)), 2) / (N*0.50400) + Math.pow((doblepar - (N*0.10800)), 2) / (N*0.10800)
                 + //SE LE PUEDE UNIR EN CASO DE QUE LAS FRECUENCIAS SALGAN MENORES QUE 5
-                Math.pow((tercia1 - 7.20), 2) / 7.20 + Math.pow((poker1 - 0.45), 2) / 0.45
-                + Math.pow((full - 0.90), 2) / 0.90 + Math.pow((quintilla1 - 0.10), 2) / 0.10
-                + Math.pow((todosdiferentes1 - 30.24), 2) / 30.24;//estadistico ((FO-FE)^2)/FE
+                Math.pow((tercia1 - (N*0.07200)), 2) / (N*0.07200) + Math.pow((poker1 - (N*0.00450)), 2) / (N*0.00450)
+                + Math.pow((full - (N*0.00900)), 2) / (N*0.00900) + Math.pow((quintilla1 - (N*0.00010)), 2) / (N*0.00010)
+                + Math.pow((todosdiferentes1 - (N*0.30240)), 2) / (N*0.30240);//estadistico ((FO-FE)^2)/FE
 
         System.out.println("\nEstadistico Xo --> " + x0);
 
